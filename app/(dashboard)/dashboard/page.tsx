@@ -133,7 +133,7 @@ export default function DashboardPage() {
               </Button>
             )}
           </div>
-          <Button onClick={() => router.push('/leads/new')} className="gap-2">
+          <Button onClick={() => router.push('/leads')} className="gap-2">
             <Plus className="w-4 h-4" />
             新建学生方案
           </Button>
@@ -201,7 +201,7 @@ export default function DashboardPage() {
                 <div className="text-center py-8 text-gray-400">
                   <Users className="w-10 h-10 mx-auto mb-2 text-gray-200" />
                   <p className="text-sm">暂无学生线索</p>
-                  <Button size="sm" className="mt-3" onClick={() => router.push('/leads/new')}>
+                  <Button size="sm" className="mt-3" onClick={() => router.push('/leads')}>
                     <Plus className="w-3 h-3 mr-1" />添加第一位学生
                   </Button>
                 </div>
@@ -243,7 +243,7 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent className="space-y-2">
               {[
-                { label: '新建学生方案', icon: Plus, action: () => router.push('/leads/new'), primary: true },
+                { label: '新建学生方案', icon: Plus, action: () => router.push('/leads'), primary: true },
                 { label: '查看线索看板', icon: Users, action: () => router.push('/leads') },
               ].map(({ label, icon: Icon, action, primary }) => (
                 <Button
